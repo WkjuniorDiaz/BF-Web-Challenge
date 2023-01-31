@@ -60,8 +60,8 @@ public class LoginPage {
     }
 
     public void selectLogInBtn(){
+        wait.until(ExpectedConditions.visibilityOf(logInBtn));
         logInBtn.click();
-        wait.until(ExpectedConditions.visibilityOf(nameUser));
     }
 
     public void selectLogOutMenu(){
