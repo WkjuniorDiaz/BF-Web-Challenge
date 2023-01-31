@@ -29,6 +29,9 @@ public class ProductPage {
     @FindBy(xpath = "//a[contains(text(),'Add to cart')]")
     WebElement addCartBtn;
 
+    @FindBys(@FindBy(xpath = "//img[@class='card-img-top img-fluid']"))
+    List<WebElement> listImages;
+
     public ProductPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -49,7 +52,7 @@ public class ProductPage {
     }
 
     public void selectProduct(String product){
-        wait.until(ExpectedConditions.visibilityOfAllElements(listProducts));
+        wait.until(ExpectedConditions.visibilityOfAllElements(listImages));
 
         for (int i = 0; i<listProducts.size(); i++){
             String itemFromProductList = listProducts.get(i).getText();

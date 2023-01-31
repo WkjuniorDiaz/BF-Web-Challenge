@@ -12,4 +12,4 @@ Feature: Login
 
     Examples:
       | username | password |
-      | "okJBtest18" | "okJBtest18" |
+      | "okJBtest30" | "okJBtest30" |
